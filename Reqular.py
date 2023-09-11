@@ -17,7 +17,7 @@ def generate_random_text(length):
 def time_check():
     for i in range(0, 29):
         for j in range(0, 90):
-            pattern = r'[.|,|;|:|(|-|\s](([0-9]|[0-2][0-3]|1[0-9]|0[0-9]):([0-5][0-9]|[0-9]))[.|,|;|:|)|-|\s]'
+            pattern = r'[.|,|;|:|(|-|\s|\D](([0-9]|[0-2][0-3]|1[0-9]|0[0-9]):([0-5][0-9]|[0-9]))[.|,|;|:|)|-|\s|\D]'
             time = f'{generate_random_text(50)} {i}:{j} {generate_random_text(50)}'
             print(time, '\n')
             itms = re.findall(pattern, str(time))
